@@ -1,0 +1,364 @@
+@import "variables";
+@import "typography";
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+}
+body,
+.modal-content {
+  background-color: $bg-dark;
+  color: $color-text;
+}
+
+header,
+.modal-header {
+  background-color: $bg-light;
+}
+
+h2 {
+  padding: 6rem 4rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 35px;
+  height: 15px;
+  border: none;
+  border-radius: 30px;
+}
+.card {
+  border-radius: 30px;
+  background-color: $bg-light;
+}
+.carousel-item {
+  img {
+    height: 450px;
+    object-fit: cover;
+  }
+}
+.carousel {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+// !BEM //
+.servicios {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin: 0 auto;
+  gap: 1.5rem;
+  width: 80%;
+  &__img {
+    img {
+      transform: scaleX(-1);
+      display: block;
+      margin: 0 auto;
+      border-radius: 30px;
+      width: 100%;
+    }
+  }
+  &__text {
+    background-color: $bg-light;
+    margin: 0rem auto;
+    padding: 1rem;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  &__video {
+    video {
+      display: block;
+      margin: 0 auto;
+      border-radius: 30px;
+      width: 100%;
+    }
+  }
+}
+
+// !BEM //
+.productos {
+  display: grid;
+  grid-template-rows: repeat(4, 10rem);
+  align-content: center;
+  gap: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+
+  // *Each //
+  @each $product-name in $productos {
+    .#{$product-name} {
+      background-image: url("/img/productos/ploteo#{$product-name}.jpg");
+    }
+  }
+
+  &__item {
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+    &__link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75) 5%,
+        transparent
+      );
+    }
+  }
+}
+
+footer {
+  background-image: linear-gradient(to bottom, $bg-dark, #000000);
+  padding-top: 7.5rem;
+}
+#redesSociales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem;
+  img {
+    filter: grayscale(100%) contrast(0%) brightness(119%);
+    transition: filter 0.2s;
+    &:hover {
+      filter: grayscale(0%) contrast(100%);
+    }
+  }
+}
+
+// !BEM //
+.empresas {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  gap: 2.5rem;
+  &__item {
+    &--tittle {
+      padding: 1rem 0;
+    }
+    &--text {
+      margin: 1rem;
+    }
+    &--img {
+      width: 100%;
+      max-height: 40vw;
+      object-fit: cover;
+    }
+  }
+}
+
+.table {
+  margin-bottom: 0;
+  th,
+  td {
+    padding: 0.35rem;
+  }
+}
+.table-hover tbody tr {
+  &:hover {
+    td,
+    th {
+      background-color: hsl(0, 0%, 65%);
+    }
+  }
+}
+
+.beneficios {
+  display: grid;
+  justify-content: center;
+  margin: 2rem 0.5rem;
+  gap: 1rem;
+
+  h3 {
+    padding: 1rem 0;
+  }
+}
+
+.ubicaciones {
+  width: 80%;
+  margin: 0 auto;
+  li {
+    margin: 1rem 0;
+  }
+}
+
+.mapouter {
+  margin: 2rem auto;
+}
+.container {
+  + p {
+    background-color: $bg-light;
+    margin: 0rem auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    ul {
+      display: flex;
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: space-around;
+      align-content: center;
+    }
+  }
+  // !BEM //
+  .servicios {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "img video"
+      "text video";
+    align-content: center;
+    gap: 1.5rem;
+    &__img {
+      grid-area: img;
+    }
+    &__video {
+      grid-area: video;
+    }
+    &__text {
+      grid-area: text;
+    }
+  }
+
+  // !BEM //
+  .empresas {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+
+    &__item {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "tittle tittle"
+        "img text";
+
+      &--tittle {
+        grid-area: tittle;
+      }
+
+      &--img {
+        grid-area: img;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &--text {
+        grid-area: text;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20rem 20rem;
+    align-content: center;
+    gap: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+
+    &__item {
+      &__link {
+        align-items: flex-end;
+        padding-bottom: 2.5rem;
+        transition: padding-bottom 0.2s;
+        h3 {
+          transition: font-size 0.2s;
+        }
+        &:hover,
+        &.active {
+          padding-bottom: 7rem;
+          text-decoration-color: $color-primary;
+
+          h3 {
+            color: $color-primary;
+            font-size: 150%;
+          }
+        }
+        &.active {
+          text-decoration-color: $color-text;
+          background-image: linear-gradient(
+            to top,
+            rgb(0, 0, 0) 5%,
+            transparent
+          );
+          h3 {
+            color: $color-text;
+            font-size: 150%;
+          }
+        }
+      }
+    }
+  }
+
+  // !BEM //
+  .empresas {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    width: 80%;
+    margin: 0 auto;
+    &__item {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      grid-template-areas:
+        "img tittle"
+        "img text";
+      &--tittle {
+        grid-area: tittle;
+      }
+      &--img {
+        grid-area: img;
+        width: 100%;
+        object-fit: cover;
+      }
+      &--text {
+        grid-area: text;
+      }
+    }
+  }
+
+  .beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "tittle tittle"
+      "p p"
+      "p p"
+      "list aside";
+    h2 {
+      grid-area: tittle;
+    }
+    p {
+      padding: 2rem;
+      margin: 1rem;
+      background-color: $bg-light;
+      border-radius: 30px;
+    }
+
+    ol {
+      grid-area: list;
+      padding: 0 1rem;
+    }
+    aside {
+      grid-area: aside;
+    }
+  }
+}

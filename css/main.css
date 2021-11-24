@@ -1,0 +1,334 @@
+* {
+  font-family: "Roboto", sans-serif;
+  list-style: none; }
+
+.navbar-brand h1 {
+  text-decoration: none;
+  color: #16c4ca;
+  font-weight: bold; }
+
+a {
+  transition: color 0.1s;
+  color: #ebebeb; }
+  a.nav-link h3 {
+    color: rgba(235, 235, 235, 0.5); }
+  a.nav-link.active h3 {
+    color: #ebebeb; }
+  a.nav-link:hover h3 {
+    color: #93cdf0; }
+
+p:hover [data-bs-toggle] {
+  color: #16c4ca; }
+
+h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 800;
+  color: #93cdf0; }
+
+.servicios__text {
+  text-align: center;
+  font-size: 1.2rem; }
+
+.productos {
+  text-align: center;
+  color: #ebebeb; }
+  .productos__item__link {
+    font-size: 1.5rem; }
+
+footer {
+  text-align: center; }
+
+.empresas {
+  text-align: center; }
+  .empresas__item--tittle {
+    font-size: 2.5rem; }
+  .empresas__item--text {
+    font-size: 1.5rem; }
+
+.table {
+  color: #ebebeb; }
+
+.beneficios {
+  text-align: center; }
+  .beneficios ol li {
+    list-style: decimal;
+    list-style-position: inside; }
+  .beneficios h3 {
+    font-size: 2rem; }
+
+.container + p {
+  text-align: center;
+  font-size: 2.5rem; }
+
+@media only screen and (min-width: 768px) {
+  .servicios__text {
+    font-size: 1.5rem; }
+  .empresas {
+    text-align: center; } }
+
+@media only screen and (min-width: 1024px) {
+  .productos {
+    text-align: center; }
+  .servicios__text {
+    font-size: 2.75rem; }
+  .empresas {
+    text-align: center; }
+  .beneficios p {
+    font-size: 1.5rem; } }
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: "Roboto", sans-serif;
+  list-style: none; }
+
+body,
+.modal-content {
+  background-color: #212121;
+  color: #ebebeb; }
+
+header,
+.modal-header {
+  background-color: #3d3d3d; }
+
+h2 {
+  padding: 6rem 4rem; }
+
+.carousel-indicators [data-bs-target] {
+  width: 35px;
+  height: 15px;
+  border: none;
+  border-radius: 30px; }
+
+.card {
+  border-radius: 30px;
+  background-color: #3d3d3d; }
+
+.carousel-item img {
+  height: 450px;
+  object-fit: cover; }
+
+.carousel {
+  border-radius: 30px;
+  overflow: hidden; }
+
+.servicios {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin: 0 auto;
+  gap: 1.5rem;
+  width: 80%; }
+  .servicios__img img {
+    transform: scaleX(-1);
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 100%; }
+  .servicios__text {
+    background-color: #3d3d3d;
+    margin: 0rem auto;
+    padding: 1rem;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 100%; }
+  .servicios__video video {
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 100%; }
+
+.productos {
+  display: grid;
+  grid-template-rows: repeat(4, 10rem);
+  align-content: center;
+  gap: 1.5rem;
+  width: 80%;
+  margin: 0 auto; }
+  .productos .vehiculos {
+    background-image: url("/img/productos/ploteovehiculos.jpg"); }
+  .productos .notebooks {
+    background-image: url("/img/productos/ploteonotebooks.jpg"); }
+  .productos .electrodomesticos {
+    background-image: url("/img/productos/ploteoelectrodomesticos.jpg"); }
+  .productos .vidrios {
+    background-image: url("/img/productos/ploteovidrios.jpg"); }
+  .productos__item {
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center; }
+    .productos__item__link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75) 5%, transparent); }
+
+footer {
+  background-image: linear-gradient(to bottom, #212121, #000000);
+  padding-top: 7.5rem; }
+
+#redesSociales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem; }
+  #redesSociales img {
+    filter: grayscale(100%) contrast(0%) brightness(119%);
+    transition: filter 0.2s; }
+    #redesSociales img:hover {
+      filter: grayscale(0%) contrast(100%); }
+
+.empresas {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  gap: 2.5rem; }
+  .empresas__item--tittle {
+    padding: 1rem 0; }
+  .empresas__item--text {
+    margin: 1rem; }
+  .empresas__item--img {
+    width: 100%;
+    max-height: 40vw;
+    object-fit: cover; }
+
+.table {
+  margin-bottom: 0; }
+  .table th,
+  .table td {
+    padding: 0.35rem; }
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #a6a6a6; }
+
+.beneficios {
+  display: grid;
+  justify-content: center;
+  margin: 2rem 0.5rem;
+  gap: 1rem; }
+  .beneficios h3 {
+    padding: 1rem 0; }
+
+.ubicaciones {
+  width: 80%;
+  margin: 0 auto; }
+  .ubicaciones li {
+    margin: 1rem 0; }
+
+.mapouter {
+  margin: 2rem auto; }
+
+.container + p {
+  background-color: #3d3d3d;
+  margin: 0rem auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 30px;
+  box-sizing: border-box;
+  width: 80%; }
+
+@media only screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-content: center; }
+  .servicios {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img video" "text video";
+    align-content: center;
+    gap: 1.5rem; }
+    .servicios__img {
+      grid-area: img; }
+    .servicios__video {
+      grid-area: video; }
+    .servicios__text {
+      grid-area: text; }
+  .empresas {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem; }
+    .empresas__item {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "tittle tittle" "img text"; }
+      .empresas__item--tittle {
+        grid-area: tittle; }
+      .empresas__item--img {
+        grid-area: img;
+        height: 100%;
+        object-fit: cover; }
+      .empresas__item--text {
+        grid-area: text; } }
+
+@media only screen and (min-width: 1024px) {
+  .productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20rem 20rem;
+    align-content: center;
+    gap: 1.5rem;
+    width: 80%;
+    margin: 0 auto; }
+    .productos__item__link {
+      align-items: flex-end;
+      padding-bottom: 2.5rem;
+      transition: padding-bottom 0.2s; }
+      .productos__item__link h3 {
+        transition: font-size 0.2s; }
+      .productos__item__link:hover, .productos__item__link.active {
+        padding-bottom: 7rem;
+        text-decoration-color: #93cdf0; }
+        .productos__item__link:hover h3, .productos__item__link.active h3 {
+          color: #93cdf0;
+          font-size: 150%; }
+      .productos__item__link.active {
+        text-decoration-color: #ebebeb;
+        background-image: linear-gradient(to top, black 5%, transparent); }
+        .productos__item__link.active h3 {
+          color: #ebebeb;
+          font-size: 150%; }
+  .empresas {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    width: 80%;
+    margin: 0 auto; }
+    .empresas__item {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      grid-template-areas: "img tittle" "img text"; }
+      .empresas__item--tittle {
+        grid-area: tittle; }
+      .empresas__item--img {
+        grid-area: img;
+        width: 100%;
+        object-fit: cover; }
+      .empresas__item--text {
+        grid-area: text; }
+  .beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tittle tittle" "p p" "p p" "list aside"; }
+    .beneficios h2 {
+      grid-area: tittle; }
+    .beneficios p {
+      padding: 2rem;
+      margin: 1rem;
+      background-color: #3d3d3d;
+      border-radius: 30px; }
+    .beneficios ol {
+      grid-area: list;
+      padding: 0 1rem; }
+    .beneficios aside {
+      grid-area: aside; } }

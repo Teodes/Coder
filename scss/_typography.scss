@@ -1,0 +1,135 @@
+@import "variables";
+
+* {
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+}
+
+.navbar-brand {
+  h1 {
+    text-decoration: none;
+    color: $color-secondary;
+    font-weight: bold;
+  }
+}
+
+a {
+  transition: color 0.1s;
+  color: $color-text;
+  &.nav-link {
+    h3 {
+      color: rgba(235, 235, 235, 0.5);
+    }
+    &.active {
+      h3 {
+        color: rgb(235, 235, 235);
+      }
+    }
+    &:hover {
+      h3 {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+p {
+  &:hover [data-bs-toggle] {
+    color: $color-secondary;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 800;
+  color: $color-primary;
+}
+
+.servicios {
+  &__text {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+.productos {
+  text-align: center;
+  color: $color-text;
+  &__item {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+.empresas {
+  text-align: center;
+  &__item {
+    &--tittle {
+      font-size: 2.5rem;
+    }
+    &--text {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.table {
+  color: $color-text;
+}
+
+.beneficios {
+  text-align: center;
+  ol {
+    li {
+      list-style: decimal;
+      list-style-position: inside;
+    }
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  + p {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .servicios {
+    &__text {
+      font-size: 1.5rem;
+    }
+  }
+
+  .empresas {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .productos {
+    text-align: center;
+  }
+
+  .servicios__text {
+    font-size: 2.75rem;
+  }
+
+  .empresas {
+    text-align: center;
+  }
+
+  .beneficios {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
