@@ -93,6 +93,11 @@ header,
 .modal-header {
   background-color: #3d3d3d; }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+
 h2 {
   padding: 6rem 4rem; }
 
