@@ -86,7 +86,7 @@ footer {
 
 body,
 .modal-content {
-  background-color: #212121;
+  background-color: #171717;
   color: #ebebeb; }
 
 header,
@@ -173,7 +173,7 @@ h2 {
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75) 5%, transparent); }
 
 footer {
-  background-image: linear-gradient(to bottom, #212121, #000000);
+  background-image: linear-gradient(to bottom, #171717, #000000);
   padding-top: 7.5rem;
   padding-bottom: 1rem; }
 
