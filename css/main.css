@@ -17,12 +17,14 @@ a {
   a.nav-link:hover h3 {
     color: #93cdf0; }
 
-p:hover [data-bs-toggle] {
-  color: #16c4ca; }
+p {
+  font-size: 1.5rem; }
+  p:hover [data-bs-toggle] {
+    color: #16c4ca; }
 
 h2 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-style: italic;
   font-weight: 800;
   color: #93cdf0; }
@@ -78,6 +80,67 @@ footer {
   .beneficios p {
     font-size: 1.5rem; } }
 
+/*.landing {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    transition: filter 0.75s;
+
+    div {
+      align-items: center;
+    }
+    img {
+      transition: filter 0.75s;
+      filter: grayscale(30%);
+    }
+  }
+}
+.landing:hover {
+  img {
+    filter: grayscale(0%) hue-rotate(-40deg);
+  }
+  .der {
+    filter: hue-rotate(65deg);
+  }
+}
+*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  object-fit: cover; }
+  .landing .right {
+    transform: scaleX(-1);
+    z-index: -10;
+    height: 600px;
+    filter: opacity(30%);
+    padding: 100px 0;
+    animation: colorChange 7s steps(36) infinite;
+    animation-direction: alternate; }
+  .landing div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .landing div div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .landing div div h2 {
+        flex-grow: 0; }
+      .landing div div p {
+        flex-grow: 1;
+        align-self: center; }
+  .landing .left {
+    display: none; }
+
+@keyframes colorChange {
+  from {
+    filter: hue-rotate(0deg) opacity(30%); }
+  to {
+    filter: hue-rotate(-55deg) opacity(30%); } }
+
 * {
   margin: 0rem;
   padding: 0rem;
@@ -99,16 +162,16 @@ header {
   z-index: 100; }
 
 h2 {
-  padding: 6rem 4rem; }
+  padding: 3rem 2rem; }
 
 .carousel-indicators [data-bs-target] {
   width: 35px;
   height: 15px;
   border: none;
-  border-radius: 30px; }
+  border-radius: 10px; }
 
 .card {
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: #3d3d3d; }
 
 .carousel-item img {
@@ -116,7 +179,7 @@ h2 {
   object-fit: cover; }
 
 .carousel {
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden; }
 
 .servicios {
@@ -129,19 +192,19 @@ h2 {
     transform: scaleX(-1);
     display: block;
     margin: 0 auto;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 100%; }
   .servicios__text {
     background-color: #3d3d3d;
     margin: 0rem auto;
     padding: 1rem;
-    border-radius: 30px;
+    border-radius: 10px;
     box-sizing: border-box;
     width: 100%; }
   .servicios__video video {
     display: block;
     margin: 0 auto;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 100%; }
 
 .productos {
@@ -160,7 +223,7 @@ h2 {
   .productos .vidrios {
     background-image: url("/img/productos/ploteovidrios.jpg"); }
   .productos__item {
-    border-radius: 30px;
+    border-radius: 10px;
     overflow: hidden;
     background-size: cover;
     background-position: center; }
@@ -234,7 +297,7 @@ footer {
   margin: 0rem auto;
   margin-top: 2rem;
   padding: 1rem;
-  border-radius: 30px;
+  border-radius: 10px;
   box-sizing: border-box;
   width: 80%; }
 
@@ -332,7 +395,7 @@ footer {
       padding: 2rem;
       margin: 1rem;
       background-color: #3d3d3d;
-      border-radius: 30px; }
+      border-radius: 10px; }
     .beneficios ol {
       grid-area: list;
       padding: 0 1rem; }

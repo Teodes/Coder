@@ -37,11 +37,12 @@ p {
   &:hover [data-bs-toggle] {
     color: $color-secondary;
   }
+  font-size: 1.5rem;
 }
 
 h2 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-style: italic;
   font-weight: 800;
   color: $color-primary;
