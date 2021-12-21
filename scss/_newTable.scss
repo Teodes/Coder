@@ -1,0 +1,116 @@
+@import "variables";
+
+.card-body {
+  background-color: $bg-light;
+  border-bottom-left-radius: $b-r;
+  border-bottom-right-radius: $b-r;
+}
+
+.comp-table {
+  padding: 0;
+  ul li {
+    margin-bottom: 1.4rem;
+  }
+  .table-cards {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .princing-item {
+      padding: 0 !important;
+      flex: 1 1 0px;
+    }
+  }
+}
+.pricing-divider {
+  padding: 1em 0 4em;
+  position: relative;
+  border-radius: $b-r;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.pricing-divider-img {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+}
+.deco-layer {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  fill: $bg-light;
+}
+.btn-custom {
+  background: $color-secondary;
+  color: $bg-dark;
+  border-radius: 20px;
+}
+
+.princing-item {
+  transition: all 150ms ease-out;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    transform: scale(1.05);
+    .deco-layer--1 {
+      -webkit-transform: translate3d(15px, 0, 0);
+      transform: translate3d(15px, 0, 0);
+    }
+    .deco-layer--2 {
+      -webkit-transform: translate3d(-15px, 0, 0);
+      transform: translate3d(-15px, 0, 0);
+    }
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    ul {
+      flex-grow: 1;
+    }
+    .btn {
+      margin: 0 auto;
+      border-radius: $b-r;
+      transition: all 0.1s;
+      &:hover {
+        transform: scale(1.05);
+        background: $color-primary;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .comp-table {
+    .table-cards {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      gap: 2rem;
+      .princing-item {
+        padding: 0 !important;
+        flex: 1 1 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .comp-table {
+    .table-cards {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      .princing-item {
+        padding: 0 !important;
+        flex: 1 1 0px;
+      }
+    }
+  }
+}
