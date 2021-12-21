@@ -47,6 +47,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -90,12 +91,12 @@
                     >
                   </li>
                   <li>
-                <a
+                    <a
                       class="nav-link"
                       href="./productos/electrodomesticos.html"
                       ><h4>Electrodomésticos</h4></a
-                >
-              </li>
+                    >
+                  </li>
                   <li>
                     <a class="nav-link" href="./productos/vidriosyparedes.html"
                       ><h4>Vidrieras</h4></a
@@ -119,97 +120,313 @@
         </div>
       </nav>
     </header>
+    <!-- !New Table Start -->
+    <div class="container-fluid comp-table">
+      <h2>La Mayor Variedad de Productos y Diseños</h2>
+      <div class="table-cards text-center">
+        <div class="princing-item">
+          <div class="pricing-divider vehiculos">
+            <h3 class="text-light">Vehículos</h3>
 
-    <div class="container">
-      <h2>Nuestros Productos y Servicios</h2>
-      <div class="card mt-2 mx-auto p-4">
-        <table
-          class="
-            table table-sm table-hover table-bordered
-            card-body
-            table-responsive-sm
-          "
-          style="background-color: #3d3d3d"
-        >
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Colores y Diseños</th>
-              <th scope="col">Caracteristicas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Vehicular</th>
-              <td>Tornasolados, mates, metalicos y brillantes</td>
-              <td>
-                Posee un grosor mas grande, lo cual le otorga mas resistencia
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Notebooks</th>
-              <td>Gamer, colores solidos, patrones y diseños personalizados</td>
-              <td>
+            <svg
+              class="pricing-divider-img"
+              enable-background="new 0 0 300 100"
+              height="100px"
+              id="Layer_1"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 300 100"
+              width="300px"
+              x="0px"
+              xml:space="preserve"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0px"
+            >
+              <path
+                class="deco-layer deco-layer--1"
+                d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--2"
+                d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--3"
+                d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+H42.401L43.415,98.342z"
+                fill="#FFFFFF"
+                opacity="0.7"
+              ></path>
+              <path
+                class="deco-layer deco-layer--4"
+                d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z"
+                fill="#FFFFFF"
+              ></path>
+            </svg>
+          </div>
+          <div class="card-body mt-0 shadow">
+            <ul class="list-unstyled position-relative">
+              <li>Tornasolados, mates, metálicos y brillantes</li>
+              <li>
+                Posee un grosor más grande, lo cual le otorga más resistencia.
+              </li>
+            </ul>
+            <a
+              href="./productos/vehiculos.html"
+              class="btn btn-lg btn-block btn-custom w-75"
+            >
+              Ver más
+            </a>
+          </div>
+        </div>
+
+        <div class="princing-item">
+          <div class="pricing-divider notebooks">
+            <h3 class="text-light">Notebooks</h3>
+
+            <svg
+              class="pricing-divider-img"
+              enable-background="new 0 0 300 100"
+              height="100px"
+              id="Layer_1"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 300 100"
+              width="300px"
+              x="0px"
+              xml:space="preserve"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0px"
+            >
+              <path
+                class="deco-layer deco-layer--1"
+                d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--2"
+                d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--3"
+                d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+H42.401L43.415,98.342z"
+                fill="#FFFFFF"
+                opacity="0.7"
+              ></path>
+              <path
+                class="deco-layer deco-layer--4"
+                d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z"
+                fill="#FFFFFF"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="card-body mt-0 shadow">
+            <ul class="list-unstyled position-relative">
+              <li>Gamer, colores sólidos, patrones y diseños personalizados</li>
+              <li>
                 Existen diferentes combos, algunos incluyen ploteos para
-                touchpad, teclas, entre otros
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Electrodomesticos</th>
-              <td>Diseños Ingeniosos, personalizados, y frases</td>
-              <td>
-                Maxima facilidad a la hora de limpiar, resistente a manchas y
-                rayaduras
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Vidrios y Paredes</th>
-              <td>Efecto marmol, madera, polarizado, esmerilado y espejado</td>
-              <td>Cortes personalizados, frases, y la mejor adherencia</td>
-            </tr>
-          </tbody>
-        </table>
+                touchpad, teclas, entre otros.
+              </li>
+            </ul>
+            <a
+              href="./productos/notebooks.html"
+              class="btn btn-lg btn-block btn-custom w-75"
+            >
+              Ver más
+            </a>
+          </div>
+        </div>
+
+        <div class="princing-item">
+          <div class="pricing-divider electrodomesticos">
+            <h3 class="text-light">Electrodomésticos</h3>
+
+            <svg
+              class="pricing-divider-img"
+              enable-background="new 0 0 300 100"
+              height="100px"
+              id="Layer_1"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 300 100"
+              width="300px"
+              x="0px"
+              xml:space="preserve"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0px"
+            >
+              <path
+                class="deco-layer deco-layer--1"
+                d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--2"
+                d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--3"
+                d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+H42.401L43.415,98.342z"
+                fill="#FFFFFF"
+                opacity="0.7"
+              ></path>
+              <path
+                class="deco-layer deco-layer--4"
+                d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z"
+                fill="#FFFFFF"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="card-body mt-0 shadow">
+            <ul class="list-unstyled position-relative">
+              <li>Diseños ingeniosos, personalizados, y frases</li>
+              <li>
+                Máxima facilidad a la hora de limpiar, resistente a manchas y
+                rayaduras.
+              </li>
+            </ul>
+            <a
+              href="./productos/electrodomesticos.html"
+              class="btn btn-lg btn-block btn-custom w-75"
+            >
+              Ver más
+            </a>
+          </div>
+        </div>
+
+        <div class="princing-item">
+          <div class="pricing-divider vidrios">
+            <h3 class="text-light">Vidrieras</h3>
+
+            <svg
+              class="pricing-divider-img"
+              enable-background="new 0 0 300 100"
+              height="100px"
+              id="Layer_1"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 300 100"
+              width="300px"
+              x="0px"
+              xml:space="preserve"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0px"
+            >
+              <path
+                class="deco-layer deco-layer--1"
+                d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--2"
+                d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z"
+                fill="#FFFFFF"
+                opacity="0.6"
+              ></path>
+              <path
+                class="deco-layer deco-layer--3"
+                d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+H42.401L43.415,98.342z"
+                fill="#FFFFFF"
+                opacity="0.7"
+              ></path>
+              <path
+                class="deco-layer deco-layer--4"
+                d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z"
+                fill="#FFFFFF"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="card-body mt-0 shadow">
+            <ul class="list-unstyled position-relative">
+              <li>Efecto mármol, madera, polarizado, esmerilado y espejado.</li>
+              <li>Cortes personalizados, frases, y la mejor adherencia.</li>
+            </ul>
+            <a
+              href="./productos/vidriosyparedes.html"
+              class="btn btn-lg btn-block btn-custom w-75"
+            >
+              Ver más
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- !New Table End -->
 
-    <div class="beneficios">
-      <h2>Vinilos de la maxima calidad</h2>
-      <p>
-        Nuestros vinilos son fabricados a partir de una formula desarrolada a lo
-        largo de muchos años.
-      </p>
-      <p>Lo hemos llamado RM, ya que es anti Rayaduras y anti Manchas.</p>
+    <section>
+      <h2>Vinilos de la Máxima Calidad</h2>
+      <div class="beneficios">
+        <div class="card card-hover beneficios__text">
+          <p>
+            Nuestros vinilos son fabricados a partir de una fórmula desarrollada
+            a lo largo de muchos años.
+          </p>
+          <p>Lo hemos llamado ARAM, ya que es Anti-Rayaduras y Anti-Manchas.</p>
+          <p>
+            Además disponemos de excelentes guías para la colocación de los
+            vinilos.
+          </p>
+        </div>
+        <div>
+          <img
+            class="card card-hover beneficios__left"
+            src="../img/carac/mirror-wrap.jpg"
+            alt="Ploteo de Espejo"
+          />
+        </div>
 
-      <aside>
-        <ul>
-          <caption>
-            <h3>Otras Caracteristicas</h3>
-          </caption>
-          <li>Minimos rastro de residuo al quitarlo</li>
-          <li>Excelente elasticidad y resistencia</li>
-          <li>Facil aplicacion</li>
-        </ul>
-      </aside>
-
-      <ol>
-        <caption>
-          <h3>Pasos para retirar nuestros vinilos</h3>
-        </caption>
-        <li>Aplicar un poco de calor en uno de los bordes</li>
-        <li>
-          Tirar progresivamente de la esquina caliente, tratando de mantener un
-          angulo de 90° con la superficie
-        </li>
-        <li>
-          En caso de que la tarea se dificulte o la superficie sea fragil,
-          volver a aplicar calor
-        </li>
-        <li>
-          Una vez retirado el vinilo, lavar la superficie para eliminar
-          cualquier posible residuo de pegamento
-        </li>
-      </ol>
-    </div>
+        <aside class="card card-hover">
+          <ul>
+            <caption>
+              <h3>Otras Características</h3>
+            </caption>
+            <li>Mínimo rastro de residuo al quitarlo.</li>
+            <li>Excelente elasticidad y resistencia.</li>
+            <li>Fácil aplicación.</li>
+          </ul>
+        </aside>
+        <div>
+          <img
+            class="card card-hover beneficios__right"
+            src="../img/carac/door-wrap.jpg"
+            alt="Ploteo de puerta"
+          />
+        </div>
+      </div>
+    </section>
     <footer>
       <section id="redesSociales">
         <img
@@ -262,9 +479,9 @@
               ></button>
             </div>
             <div class="modal-body">
-              Estamos muy agradecidos de que hayas visitado nuestra pagina, nos
+              Estamos muy agradecidos de que hayas visitado nuestra página, nos
               encanta lo que hacemos y es un sueño poder compartir nuestra
-              pasion.
+              pasión.
             </div>
             <div class="modal-footer">
               <button
