@@ -10,12 +10,15 @@
 a {
   transition: color 0.1s;
   color: #ebebeb; }
-  a.nav-link h3 {
+  a.nav-link h4 {
     color: rgba(235, 235, 235, 0.5); }
-  a.nav-link.active h3 {
+  a.nav-link.active h4 {
     color: #ebebeb; }
-  a.nav-link:hover h3 {
+  a.nav-link:hover h4 {
     color: #93cdf0; }
+
+.subNav:hover > a h4 {
+  color: #93cdf0; }
 
 p {
   font-size: 1.5rem; }
@@ -45,7 +48,7 @@ footer {
 .empresas {
   text-align: center; }
   .empresas__item--tittle {
-    font-size: 2.5rem; }
+    font-size: 2rem; }
   .empresas__item--text {
     font-size: 1.5rem; }
 
@@ -80,66 +83,96 @@ footer {
   .beneficios p {
     font-size: 1.5rem; } }
 
-/*.landing {
-  > div {
+.card-body {
+  background-color: #3d3d3d;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.comp-table {
+  padding: 0; }
+  .comp-table ul li {
+    margin-bottom: 1.4rem; }
+  .comp-table .table-cards {
+    width: 80%;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
-    transition: filter 0.75s;
+    flex-direction: column;
+    gap: 2rem; }
+    .comp-table .table-cards .princing-item {
+      padding: 0 !important;
+      flex: 1 1 0px; }
 
-    div {
-      align-items: center;
-    }
-    img {
-      transition: filter 0.75s;
-      filter: grayscale(30%);
-    }
-  }
-}
-.landing:hover {
-  img {
-    filter: grayscale(0%) hue-rotate(-40deg);
-  }
-  .der {
-    filter: hue-rotate(65deg);
-  }
-}
-*/
-.landing {
+.pricing-divider {
+  padding: 1em 0 4em;
   position: relative;
-  width: 100%;
-  height: 500px;
-  object-fit: cover; }
-  .landing .right {
-    transform: scaleX(-1);
-    z-index: -10;
-    height: 600px;
-    filter: opacity(30%);
-    padding: 100px 0;
-    animation: colorChange 7s steps(36) infinite;
-    animation-direction: alternate; }
-  .landing div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-    .landing div div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      .landing div div h2 {
-        flex-grow: 0; }
-      .landing div div p {
-        flex-grow: 1;
-        align-self: center; }
-  .landing .left {
-    display: none; }
+  border-radius: 10px;
+  background-size: cover;
+  background-position-y: center; }
 
-@keyframes colorChange {
-  from {
-    filter: hue-rotate(0deg) opacity(30%); }
-  to {
-    filter: hue-rotate(-55deg) opacity(30%); } }
+.pricing-divider-img {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px; }
+
+.deco-layer {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  fill: #3d3d3d; }
+
+.btn-custom {
+  background: #16c4ca;
+  color: #171717;
+  border-radius: 20px; }
+
+.princing-item {
+  transition: all 150ms ease-out;
+  display: flex;
+  flex-direction: column; }
+  .princing-item:hover {
+    transform: scale(1.05); }
+    .princing-item:hover .deco-layer--1 {
+      -webkit-transform: translate3d(15px, 0, 0);
+      transform: translate3d(15px, 0, 0); }
+    .princing-item:hover .deco-layer--2 {
+      -webkit-transform: translate3d(-15px, 0, 0);
+      transform: translate3d(-15px, 0, 0); }
+  .princing-item .card-body {
+    display: flex;
+    flex-direction: column; }
+    .princing-item .card-body ul {
+      flex-grow: 1; }
+    .princing-item .card-body .btn {
+      margin: 0 auto;
+      border-radius: 10px;
+      transition: all 0.1s; }
+      .princing-item .card-body .btn:hover {
+        transform: scale(1.05);
+        background: #93cdf0;
+        font-weight: 800; }
+
+@media only screen and (min-width: 768px) {
+  .comp-table .table-cards {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem; }
+    .comp-table .table-cards .princing-item {
+      padding: 0 !important;
+      flex: 1 1 0px; } }
+
+@media only screen and (min-width: 1440px) {
+  .comp-table .table-cards {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; }
+    .comp-table .table-cards .princing-item {
+      padding: 0 !important;
+      flex: 1 1 0px; } }
 
 * {
   margin: 0rem;
@@ -147,10 +180,22 @@ footer {
   font-family: "Roboto", sans-serif;
   list-style: none; }
 
+ol,
+ul {
+  padding: 0rem; }
+
 body,
 .modal-content {
   background-color: #171717;
   color: #ebebeb; }
+
+.card-hover {
+  transition: all 150ms ease-out; }
+  .card-hover:hover {
+    transform: scale(1.05); }
+
+section {
+  margin-bottom: 4rem; }
 
 header,
 .modal-header {
@@ -159,10 +204,38 @@ header,
 header {
   position: sticky;
   top: 0;
+  padding: 0 1rem;
   z-index: 100; }
+
+.navbar-brand {
+  overflow-wrap: normal; }
+
+.subNav {
+  overflow: hidden; }
+  .subNav:hover ul {
+    display: flex;
+    flex-direction: column; }
+  .subNav ul {
+    padding: 0rem 1rem;
+    display: none;
+    position: relative;
+    z-index: 1;
+    background-color: #3d3d3d; }
+    .subNav ul a {
+      display: flex;
+      flex-direction: column;
+      text-align: left; }
 
 h2 {
   padding: 3rem 2rem; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    color: #93cdf0; }
+  a.active h3,
+  a.active h4 {
+    text-decoration: underline #93cdf0; }
 
 .carousel-indicators [data-bs-target] {
   width: 35px;
@@ -180,7 +253,9 @@ h2 {
 
 .carousel {
   border-radius: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 80%;
+  margin: auto; }
 
 .servicios {
   display: grid;
@@ -188,24 +263,62 @@ h2 {
   margin: 0 auto;
   gap: 1.5rem;
   width: 80%; }
-  .servicios__img img {
-    transform: scaleX(-1);
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    width: 100%; }
-  .servicios__text {
-    background-color: #3d3d3d;
+  .servicios__top, .servicios__bottom {
+    background: linear-gradient(to top, rgba(61, 61, 61, 0.7) 100%, transparent), url(/img/Landing/landing-center.jpeg);
+    background-position: center;
+    background-size: cover;
     margin: 0rem auto;
     padding: 1rem;
     border-radius: 10px;
     box-sizing: border-box;
-    width: 100%; }
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .servicios__top p, .servicios__bottom p {
+      transition: color 150ms ease-out; }
+    .servicios__top:hover, .servicios__bottom:hover {
+      box-shadow: inset 0 0 0 1000px #3d3d3d; }
+      .servicios__top:hover p, .servicios__bottom:hover p {
+        color: #ebebeb; }
+  .servicios__bottom {
+    background: linear-gradient(to top, rgba(61, 61, 61, 0.7) 100%, transparent), url(/img/greencar.jpg);
+    background-position: center;
+    background-size: cover; }
   .servicios__video video {
-    display: block;
+    display: none;
     margin: 0 auto;
     border-radius: 10px;
     width: 100%; }
+
+.vehiculos {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 25%, transparent), url("/img/productos/ploteovehiculos.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken; }
+
+.notebooks {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 25%, transparent), url("/img/productos/ploteonotebooks.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken; }
+
+.electrodomesticos {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 25%, transparent), url("/img/productos/ploteoelectrodomesticos.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken; }
+
+.vidrios {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 25%, transparent), url("/img/productos/ploteovidrios.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken; }
 
 .productos {
   display: grid;
@@ -214,14 +327,6 @@ h2 {
   gap: 1.5rem;
   width: 80%;
   margin: 0 auto; }
-  .productos .vehiculos {
-    background-image: url("/img/productos/ploteovehiculos.jpg"); }
-  .productos .notebooks {
-    background-image: url("/img/productos/ploteonotebooks.jpg"); }
-  .productos .electrodomesticos {
-    background-image: url("/img/productos/ploteoelectrodomesticos.jpg"); }
-  .productos .vidrios {
-    background-image: url("/img/productos/ploteovidrios.jpg"); }
   .productos__item {
     border-radius: 10px;
     overflow: hidden;
@@ -232,12 +337,11 @@ h2 {
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75) 5%, transparent); }
+      justify-content: center; }
 
 footer {
   background-image: linear-gradient(to bottom, #171717, #000000);
-  padding-top: 7.5rem;
+  padding-top: 3rem;
   padding-bottom: 1rem; }
 
 #redesSociales {
@@ -256,14 +360,16 @@ footer {
   width: 80%;
   margin: 0 auto;
   gap: 2.5rem; }
-  .empresas__item--tittle {
-    padding: 1rem 0; }
-  .empresas__item--text {
-    margin: 1rem; }
-  .empresas__item--img {
-    width: 100%;
-    max-height: 40vw;
-    object-fit: cover; }
+  .empresas__item {
+    overflow: hidden; }
+    .empresas__item--tittle {
+      padding: 1rem 0; }
+    .empresas__item--text {
+      margin: 1rem; }
+    .empresas__item--img {
+      width: 100%;
+      height: 40vw;
+      object-fit: cover; }
 
 .table {
   margin-bottom: 0; }
@@ -276,72 +382,144 @@ footer {
   background-color: #a6a6a6; }
 
 .beneficios {
+  width: 80%;
+  margin: auto;
   display: grid;
-  justify-content: center;
-  margin: 2rem 0.5rem;
   gap: 1rem; }
-  .beneficios h3 {
-    padding: 1rem 0; }
+  .beneficios img {
+    display: none; }
+  .beneficios__text {
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem; }
 
 .ubicaciones {
   width: 80%;
-  margin: 0 auto; }
+  margin: auto;
+  display: flex;
+  flex-direction: column; }
+  .ubicaciones aside {
+    display: none; }
+  .ubicaciones .mapouter {
+    overflow: hidden;
+    border-radius: 10px; }
   .ubicaciones li {
-    margin: 1rem 0; }
+    margin: 1.5rem 0; }
 
-.mapouter {
-  margin: 2rem auto; }
-
-.container + p {
+.carousel + p {
   background-color: #3d3d3d;
   margin: 0rem auto;
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 10px;
   box-sizing: border-box;
-  width: 80%; }
+  width: 80%;
+  text-align: center; }
 
 @media only screen and (min-width: 768px) {
-  nav ul {
+  nav .navbar-nav {
     display: flex;
     height: 100%;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-around;
-    align-content: center; }
+    width: 100%;
+    justify-content: flex-end;
+    align-content: space-between; }
+  .ubicaciones {
+    gap: 2rem; }
+    .ubicaciones aside {
+      box-sizing: border-box;
+      padding: 1rem;
+      display: block; }
+  .beneficios {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "text text" "left right" "aside aside"; }
+    .beneficios div img {
+      object-fit: cover;
+      height: 15rem;
+      width: 100%;
+      display: block;
+      background: transparent; }
+    .beneficios__text {
+      grid-area: text; }
+    .beneficios__left {
+      grid-area: left; }
+    .beneficios__right {
+      grid-area: right; }
+    .beneficios aside {
+      grid-area: aside; }
   .servicios {
     display: grid;
     grid-template-columns: 4fr 3fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "img video" "text video";
+    grid-template-areas: "top video" "bottom video";
     align-content: center;
     gap: 1.5rem; }
-    .servicios__img {
-      grid-area: img; }
+    .servicios__top {
+      grid-area: top; }
+    .servicios__bottom {
+      grid-area: bottom; }
     .servicios__video {
-      grid-area: video; }
-    .servicios__text {
-      grid-area: text; }
+      grid-area: video;
+      object-fit: cover; }
+      .servicios__video video {
+        max-height: 40rem;
+        display: block;
+        object-fit: cover; }
   .empresas {
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
     width: 80%;
     margin: 0 auto;
-    gap: 1rem; }
+    gap: 3rem; }
     .empresas__item {
       display: grid;
-      grid-template-rows: repeat(3, auto);
-      grid-template-areas: "tittle tittle" "img text"; }
+      grid-template-rows: 5rem auto;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "img tittle" "img text"; }
       .empresas__item--tittle {
-        grid-area: tittle; }
+        grid-area: tittle;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
       .empresas__item--img {
         grid-area: img;
         height: 100%;
         object-fit: cover; }
       .empresas__item--text {
-        grid-area: text; } }
+        grid-area: text;
+        display: flex;
+        align-items: center; } }
+
+@media only screen and (min-width: 992px) {
+  .navbar-expand-lg .subNav ul {
+    position: absolute; } }
 
 @media only screen and (min-width: 1024px) {
+  .beneficios {
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "text text text" "left aside right"; }
+    .beneficios aside {
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+  .servicios__top, .servicios__bottom {
+    background: url(/img/Landing/landing-center.jpeg);
+    background-position: center;
+    background-size: cover; }
+    .servicios__top p, .servicios__bottom p {
+      color: transparent;
+      width: 60%; }
+    .servicios__top:hover, .servicios__bottom:hover {
+      box-shadow: inset 0 0 0 1000px rgba(61, 61, 61, 0.8); }
+      .servicios__top:hover p, .servicios__bottom:hover p {
+        color: #ebebeb; }
+  .servicios__bottom {
+    background: url(/img/greencar.jpg);
+    background-position: center;
+    background-size: cover; }
   .productos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -363,41 +541,17 @@ footer {
           color: #93cdf0;
           font-size: 150%; }
       .productos__item__link.active {
-        text-decoration-color: #ebebeb;
-        background-image: linear-gradient(to top, black 5%, transparent); }
+        text-decoration-color: #ebebeb; }
         .productos__item__link.active h3 {
           color: #ebebeb;
           font-size: 150%; }
   .empresas {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    width: 80%;
-    margin: 0 auto; }
+    grid-template-rows: repeat(2, auto); }
     .empresas__item {
-      display: grid;
       grid-template-rows: 1fr 2fr;
       grid-template-areas: "img tittle" "img text"; }
-      .empresas__item--tittle {
-        grid-area: tittle; }
       .empresas__item--img {
-        grid-area: img;
-        width: 100%;
-        object-fit: cover; }
-      .empresas__item--text {
-        grid-area: text; }
-  .beneficios {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "tittle tittle" "p p" "p p" "list aside"; }
-    .beneficios h2 {
-      grid-area: tittle; }
-    .beneficios p {
-      padding: 2rem;
-      margin: 1rem;
-      background-color: #3d3d3d;
-      border-radius: 10px; }
-    .beneficios ol {
-      grid-area: list;
-      padding: 0 1rem; }
-    .beneficios aside {
-      grid-area: aside; } }
+        height: 18rem; }
+    .empresas__item.inverted {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "tittle img" "text img"; } }
