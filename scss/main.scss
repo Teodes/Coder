@@ -18,6 +18,13 @@ body,
   color: $color-text;
 }
 
+.card-hover {
+  transition: all 150ms ease-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 header,
 .modal-header {
   background-color: $bg-light;
@@ -55,6 +62,7 @@ header {
     }
   }
 }
+
 h2 {
   padding: 3rem 2rem;
 }
